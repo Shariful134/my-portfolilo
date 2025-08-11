@@ -5,7 +5,7 @@ import { MarqueeDemo } from "@/components/modules/home/Marquee";
 import Skils from "@/components/modules/home/Skils";
 
 import ProjectsComponents from "@/components/modules/projects/ProjectsComponents";
-import Technology from "@/components/modules/technology/TechNology";
+
 export default function page() {
   return (
     <div>

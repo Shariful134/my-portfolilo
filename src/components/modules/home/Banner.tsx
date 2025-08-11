@@ -21,7 +21,7 @@ const Banner = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-2">
-              Hi, I'm <span className="text-gray-700">Shariful Islam</span>
+              Hi, I&apos;m <span className="text-gray-700">Shariful Islam</span>
             </h1>
 
             <h3 className="text-lg text-gray-700 font-semibold mb-4">

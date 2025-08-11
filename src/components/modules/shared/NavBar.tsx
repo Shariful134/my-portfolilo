@@ -46,7 +46,7 @@ const NavBar = () => {
 
   return (
     <div className="bg-gray-50 shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto navbar p-0 m-0 h-16">
+      <div className="container mx-auto navbar p-0 m-0 h-16 pr-4 xl:pr-0 ps-0 lg:ps-5">
         {/* Left */}
         <div className="navbar-start">
           {/* Mobile Dropdown */}
