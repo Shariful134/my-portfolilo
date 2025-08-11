@@ -2,8 +2,9 @@ import Image from "next/image";
 import img1 from "../../../app/assests/img/sharifulR.png";
 import img2 from "../../../app/assests/img/img-2.jpg";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { CiViewBoard } from "react-icons/ci";
 
 import Link from "next/link";
 import FlipWords from "@/components/ui/filpWords";
@@ -79,7 +80,7 @@ const Banner = () => {
                 
               >
                 <Button className="cursor-pointer border border-purple-600 hover:bg-purple-600 text-white px-6 py-2 rounded-lg flex items-center gap-2">
-                  <Download className="w-4 h-4" /> Vew Projects
+                  <CiViewBoard  className="w-4 h-4" />Vew Projects
                 </Button>
               </Link>
             </div>
