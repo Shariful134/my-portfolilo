@@ -1,158 +1,131 @@
 import { BoxReveal } from "@/components/magicui/box-reveal";
-import style from "./Projects.module.css";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
-const Project3 = () => {
+const Project2 = () => {
   return (
-    <div className={`${style.iamgeSetup2}`}>
-      <div className="container mx-auto px-2">
-        <BoxReveal boxColor={"#AD46FF"} duration={0.5}>
-          <h2 className="text-purple-400 px-2 pt-8 md:pt-15 pb-5 text-2xl md:text-5xl">
-            📘 Project: Blogify – A Role-Based Blogging Platform
+    <div className="bg-gray-100 text-gray-800 min-h-screen py-20">
+      <div className="container mx-auto px-6 xl:px-0">
+        <BoxReveal boxColor={"#2b6eebff"} duration={0.5}>
+          <h2 className="px-2 pt-8 md:pt-15 pb-5 text-4xl md:text-5xl font-bold text-gray-700">
+            📚 Project: BookBazaar – Your Trusted Online Bookstore
           </h2>
         </BoxReveal>
 
-        <div>
-          <BoxReveal boxColor={"#AD46FF"} duration={0.5}>
-            <p className="text-lg text-purple-400 max-w-2xl">🔍 Overview:</p>
-            <p className="text-lg text-gray-300 max-w-2xl">
-              Blogify is a full-featured backend application built with
-              TypeScript, Express.js, Node.js, and MongoDB using Mongoose. It
-              offers a secure and scalable blogging platform with distinct user
-              roles – Admin and User – where users can create and manage their
-              blogs, and admins have moderation capabilities.
-            </p>
-          </BoxReveal>
-
-          <BoxReveal boxColor={"#AD46FF"} duration={0.5}>
-            <h2 className="text-purple-400 pt-10 pb-5 text-2xl md:text-5xl">
-              🌟 Core Features
-            </h2>
-          </BoxReveal>
-
-          <div className="flex flex-col lg:flex-row justify-between pb-10 px-2 gap-5">
-            <div>
-              <TextAnimate
-                className="text-lg text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                🔐 Authentication & Authorization
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>JWT-based secure authentication</li>
-                <li>Role-based access control (Admin/User)</li>
-                <li>Admins are created manually in the database</li>
-                <li>
-                  Blocked users are restricted from performing any actions
-                </li>
+        <div className="flex flex-col lg:flex-row justify-between gap-10 pb-10 px-2">
+          {/* Left Side */}
+          <div className="flex-1 space-y-6">
+            <BoxReveal boxColor={"#2b6eebff"} duration={0.5}>
+              <p className="text-lg font-semibold max-w-2xl text-gray-700">🔍 Overview:</p>
+              <p className="text-base text-gray-700 max-w-2xl leading-relaxed">
+                BookBazaar is a full-stack e-commerce platform built for purchasing books with secure role-based access, intuitive search and filter features, dynamic checkout, and a responsive user interface. The platform ensures smooth user experiences, real-time stock validation, and admin-level product/order management.
               </p>
+            </BoxReveal>
 
-              <TextAnimate
-                className="text-lg mt-5 text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                ✍️ User Features
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>User Registration and Login</li>
-                <li>Create, Read, Update, and Delete (CRUD) own blogs</li>
-                <li>Blogs include: title, content, author, timestamps</li>
-              </p>
+            <BoxReveal boxColor={"#2b6eebff"} duration={0.5}>
+              <h2 className="pt-10 pb-5 text-4xl md:text-5xl font-bold text-gray-700">🌟 Core Features</h2>
+            </BoxReveal>
 
-              <TextAnimate
-                className="text-lg mt-5 text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                ⚠️ Robust Error Handling
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>Zod validation with detailed error responses</li>
-                <li>
-                  Custom error classes for ZOD_ERROR, AUTH_ERROR,
-                  AUTHORIZATION_ERROR, NOT_FOUND_ERROR, INTERNAL_SERVER_ERROR
-                </li>
-              </p>
-              <TextAnimate
-                className="text-lg text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                👮 Admin Features
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>Can delete any blog</li>
-                <li>Can block any user (sets isBlocked = true)</li>
-                <li>Cannot update blogs</li>
-                <li>Admin-only protected routes using middleware</li>
-              </p>
-            </div>
+            <TextAnimate
+              className="text-lg font-semibold max-w-2xl text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              🔐 Authentication & User Roles
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li>Users can register using name, email, and password</li>
+              <li>JWT token is generated on login and stored in localStorage</li>
+              <li>Default role is user. Admin must be updated manually</li>
+              <li>Logout clears token and redirects to login page</li>
+            </ul>
 
-            <div>
-              <TextAnimate
-                className="text-lg mt-5 text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                🌍 Public Blog API
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>Anyone can view published blogs</li>
-                <li>Search blogs by keyword (in title/content)</li>
-                <li>Sort blogs by title, createdAt, etc.</li>
-                <li>Filter blogs by author</li>
-              </p>
+            <TextAnimate
+              className="text-lg font-semibold mt-5 max-w-2xl text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              🛒 Public Pages
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li>Navbar with logo, nav items, and auth buttons</li>
+              <li>Banner with optional carousel</li>
+              <li>Featured Products (up to 6) with View All</li>
+              <li>Extra section (testimonial/blog)</li>
+              <li>Footer with social links and contact info</li>
+              <li>All Products page with search and filters (title, author, category, price, availability)</li>
+              <li>Dynamic product cards and View Details button</li>
+              <li>Product Details page with complete info and Buy Now button</li>
+              <li>About page with shop’s mission and extra info</li>
+            </ul>
 
-              <TextAnimate
-                className="text-lg mt-5 text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                🛠 Tech Stack
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>
-                  <strong>Backend:</strong> Node.js, Express.js, TypeScript
-                </li>
-                <li>
-                  <strong>Database:</strong> MongoDB (Mongoose)
-                </li>
-                <li>
-                  <strong>Auth:</strong> JWT, bcrypt
-                </li>
-                <li>
-                  <strong>Validation:</strong> Zod
-                </li>
-                <li>
-                  <strong>Deployment:</strong> Render (or Vercel for testing)
-                </li>
-              </p>
+            <TextAnimate
+              className="text-lg font-semibold mt-5 max-w-2xl text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              🔐 Private Routes
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li>Checkout only if stock is available</li>
+              <li>Total price calculation with user/product data</li>
+              <li>SurjoPay integration in sandbox mode</li>
+              <li>Order Now for placing orders</li>
+            </ul>
+          </div>
 
-              <TextAnimate
-                className="text-lg mt-5 text-purple-400 max-w-2xl"
-                animation="slideLeft"
-                by="character"
-              >
-                📂 Important Links & Credentials
-              </TextAnimate>
-              <p className="text-lg text-gray-300 max-w-2xl">
-                <li>
-                  <strong>Live API:</strong> [Live URL here]
-                </li>
-                <li>
-                  <strong>GitHub Repo (Server):</strong> [GitHub Link here]
-                </li>
-                <li>
-                  <strong>Admin Login:</strong>
-                </li>
-                <ul className="pl-5">
-                  <li>Email: admin@example.com</li>
-                  <li>Password: admin123</li>
-                </ul>
-              </p>
-            </div>
+          {/* Right Side */}
+          <div className="flex-1 space-y-6">
+            <TextAnimate
+              className="text-lg font-semibold max-w-2xl mt-5 text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              📊 Dashboards (Role-Based)
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li>Admin: Manage users (deactivate/reactivate), products (CRUD), and orders</li>
+              <li>User: View order history, update profile, change password with current validation</li>
+            </ul>
+
+            <TextAnimate
+              className="text-lg font-semibold mt-5 max-w-2xl text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              🎨 UI/UX Design Highlights
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li>Fully responsive for all devices</li>
+              <li>Friendly error messages (invalid login, duplicates, out-of-stock)</li>
+              <li>Loading spinners/skeletons during data fetch</li>
+              <li>Toasts for success/error actions</li>
+            </ul>
+
+            <TextAnimate
+              className="text-lg font-semibold mt-5 max-w-2xl text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              ✨ Optional Feature
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li>Users can leave reviews (rating 1–5, comment)</li>
+              <li>Reviewer name, rating, and comment shown on product details</li>
+            </ul>
+
+            <TextAnimate
+              className="text-lg font-semibold mt-5 max-w-2xl text-gray-700"
+              animation="slideLeft"
+              by="character"
+            >
+              🛠 Tech Stack
+            </TextAnimate>
+            <ul className="list-disc list-inside text-gray-700 max-w-2xl space-y-1 text-base leading-relaxed">
+              <li><strong>Frontend:</strong> React.js with Vite, Tailwind CSS, Toastify, React Icons</li>
+              <li><strong>Backend:</strong> Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt</li>
+              <li><strong>Payment Gateway:</strong> SurjoPay (sandbox)</li>
+              <li><strong>Deployment:</strong> Vercel (frontend), Render (backend), MongoDB Atlas (database)</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -160,4 +133,4 @@ const Project3 = () => {
   );
 };
 
-export default Project3;
+export default Project2;

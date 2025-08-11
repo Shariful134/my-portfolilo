@@ -1,116 +1,83 @@
-import Image from "next/image";
-import image from "../../../app/assests/image/img-1b.jpg";
-
-import { AnimatedBeamMultipleOutputDemo } from "./AnimatedBeam";
-const Skils = () => {
-  // h-[100vh]
+const Skills = () => {
   return (
-    <div
-      id="skills"
-      className="relative bg-[#0b0b0b] py-20 text-white overflow-hidden"
-    >
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src={image}
-          alt="Skills Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black opacity-60" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8">
-        <h2
-          className="text-center text-purple-400 text-4xl md:text-5xl font-extrabold mb-14
-                 animate-fadeSlideUp animate-delay-100"
-        >
-          Skills & Expertise
+    <div className="py-10 text-gray-800 bg-gray-100">
+      <div className="container mx-auto px-6">
+        <h2 className=" text-center text-gray-700 text-4xl md:text-5xl font-bold tracking-tight drop-shadow-sm mb-14">
+          Skills
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Left: Skill Lists */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-16">
-            {/* Technical Skills */}
-            <div
-              className="space-y-6 animate-fadeSlideUp animate-delay-300"
-              style={{ animationFillMode: "forwards" }}
-            >
-              <h3 className="text-purple-400 text-2xl font-semibold mb-5 tracking-wide drop-shadow-lg">
-                Technical Skills
-              </h3>
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3 text-gray-300 text-base">
-                <ul className="space-y-3 list-disc list-inside">
-                  {[
-                    "HTML",
-                    "CSS",
-                    "Bootstrap",
-                    "Tailwind CSS",
-                    "SASS",
-                    "ShadCN UI",
-                    "React.js",
-                  ].map((skill) => (
-                    <li
-                      key={skill}
-                      className="list-none sm:list-disc cursor-default transform transition-transform duration-300 hover:scale-110 hover:text-purple-400"
-                    >
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-                <ul className="list-none sm:list-disc space-y-3  list-inside">
-                  {[
-                    "Next.js",
-                    "TypeScript",
-                    "JavaScript",
-                    "MongoDB",
-                    "Mongoose",
-                    "Node.js",
-                    "Express.js",
-                  ].map((skill) => (
-                    <li
-                      key={skill}
-                      className="list-none sm:list-disc cursor-default transform transition-transform duration-300 hover:scale-110 hover:text-purple-400"
-                    >
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Soft Skills */}
-            <div
-              className="animate-fadeSlideUp animate-delay-500"
-              style={{ animationFillMode: "forwards" }}
-            >
-              <h3 className="text-purple-400 text-2xl font-semibold mb-5 tracking-wide drop-shadow-lg">
-                Soft Skills
-              </h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-3 text-base max-w-md mx-auto md:mx-0">
-                {[
-                  "Effective Communication",
-                  "Team Collaboration",
-                  "Time Management",
-                  "Self-Motivation",
-                  "Leadership",
-                ].map((skill) => (
-                  <li
-                    key={skill}
-                    className="list-none sm:list-disc cursor-default transform transition-transform duration-300 hover:scale-110 hover:text-purple-400"
-                  >
-                    {skill}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+         
+          <div
+            className="bg-gray-100 rounded-lg shadow-sm border border-gray-300 p-6 w-full max-w-2xl h-48 md:h-52 mx-auto md:mx-0 flex flex-col justify-center relative fadeSlideUp
+              hover:shadow-white transition-shadow transform hover:scale-[1.03] cursor-default"
+            style={{ animationDelay: "0.1s" }}
+          >
+           
+            <span className="absolute top-0 left-0 h-full w-1 bg-white rounded-l-md"></span>
+           
+            <h3 className="text-xl md:text-2xl text-gray-700 font-semibold mb-3 z-10 relative">
+              Languages
+            </h3>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed z-10 relative">
+              <span className="font-semibold text-gray-700">Programming:</span>{" "}
+              HTML, CSS, JavaScript, TypeScript, C
+            </p>
           </div>
 
-          {/* Right: Animation or Graphic */}
-          <div className="hidden md:flex justify-center items-center animate-fadeSlideUp animate-delay-700">
-            <AnimatedBeamMultipleOutputDemo />
+          {/* FrontEnd Card */}
+          <div
+            className="bg-gray-100 rounded-lg shadow-sm border border-gray-300 p-6 w-full max-w-2xl h-48 md:h-52 mx-auto md:mx-0 flex flex-col justify-center relative fadeSlideUp
+              hover:shadow-white transition-shadow transform hover:scale-[1.03] cursor-default"
+            style={{ animationDelay: "0.3s" }}
+          >
+            <span className="absolute top-0 left-0 h-full w-1 bg-white rounded-l-md"></span>
+           
+            <h3 className="text-xl md:text-2xl text-gray-700 font-semibold mb-3 z-10 relative">
+              FrontEnd
+            </h3>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed z-10 relative">
+              <span className="font-semibold text-gray-700">Frameworks:</span>{" "}
+              Shadcn UI, Ant Design React, Vite, Redux, Next.js
+            </p>
+          </div>
+
+          {/* BackEnd Card */}
+          <div
+            className="bg-gray-100 rounded-lg shadow-sm border border-gray-300 p-6 w-full max-w-2xl h-48 md:h-52 mx-auto md:mx-0 flex flex-col justify-center relative fadeSlideUp
+              hover:shadow-white transition-shadow transform hover:scale-[1.03] cursor-default"
+            style={{ animationDelay: "0.5s" }}
+          >
+            <span className="absolute top-0 left-0 h-full w-1 bg-white rounded-l-md"></span>
+           
+            <h3 className="text-xl md:text-2xl text-gray-700 font-semibold mb-3 z-10 relative">
+              BackEnd
+            </h3>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed z-10 relative">
+              <span className="font-semibold text-gray-700">Frameworks:</span>{" "}
+              Node.js, Express.js
+            </p>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed mt-2 z-10 relative">
+              <span className="font-semibold text-gray-700">Database:</span>{" "}
+              MongoDB, Mongoose
+            </p>
+          </div>
+
+          {/* Soft Skills Card */}
+          <div
+            className="bg-gray-100 rounded-lg shadow-sm border border-gray-300 p-6 w-full max-w-2xl h-48 md:h-52 mx-auto md:mx-0 flex flex-col justify-center relative fadeSlideUp
+              hover:shadow-white transition-shadow transform hover:scale-[1.03] cursor-default"
+            style={{ animationDelay: "0.7s" }}
+          >
+            <span className="absolute top-0 left-0 h-full w-1 bg-white rounded-l-md"></span>
+           
+            <h3 className="text-xl md:text-2xl text-gray-700 font-semibold mb-3 z-10 relative">
+              Soft Skills
+            </h3>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-2xl z-10 relative">
+              Hard working, Quick learner, Active listening, Teamwork, Responsibility,
+              Leadership, Motivation, Flexibility
+            </p>
           </div>
         </div>
       </div>
@@ -118,4 +85,4 @@ const Skils = () => {
   );
 };
 
-export default Skils;
+export default Skills;
