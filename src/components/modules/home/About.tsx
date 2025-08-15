@@ -30,7 +30,7 @@ export function About() {
         {/* Paragraph 2 */}
         <BoxReveal boxColor="#3B82F6" duration={0.5}>
           <p className="text-gray-700 text-base md:text-lg max-w-3xl leading-relaxed">
-            As a proud student of Programming Hero, I am constantly learning,
+            I am constantly learning,
             keeping up with industry trends, and improving my development
             skills. I thrive in collaborative environments and love turning
             creative ideas into scalable digital solutions.
